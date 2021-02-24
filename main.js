@@ -77,14 +77,79 @@ console.log(enlaceAtributo.getAttribute("href"))
 let cajaDesapareceAparece = boxes[6]
 cajaDesapareceAparece.style.display = "none"
 
-setTimeout(() => {
+/* setTimeout(() => {
     cajaDesapareceAparece.style.display = "inline-block"
 },1000)
-
-/* Clonar un nodo */
+ */
+/* Clonar un nodo e insertarlo */
 
 let enlaceButton = enlaces[3];
 
 let enlaceClon = enlaceButton.cloneNode(true)
 
 body.appendChild(enlaceClon)
+
+console.log(cajaDesapareceAparece.getAttribute("style"))
+
+console.log(cajaDesapareceAparece.className)
+
+/* Combinando interval con toggle clase */
+
+/* setInterval(() => {
+
+    boxes = [...boxes]
+
+    boxes.forEach(n => {
+        n.classList.toggle("cajita")
+    })
+
+},1000) */
+
+
+/* Creando elemento y dandole estilos desde JS */
+
+let $box = d.createElement("div")
+let $boxImage = d.createElement("img")
+$boxImage.setAttribute("src", "https://placeimg.com/200/200/animals")
+let $boxContent = d.createTextNode("Un animalito")
+
+$box.appendChild($boxImage)
+
+$box.appendChild($boxContent, $boxImage)
+$box.classList.add("box")
+
+
+$boxImage.style.display = "block"
+
+body.insertAdjacentElement("beforeend", $box)
+
+/* Agregando elemento rápido con innerHTML */
+
+
+let $box2 = d.createElement("div")
+let $figure = d.createElement("figure")
+
+$figure.innerHTML = 
+`<img src='https://placeimg.com/200/200/random' alt='animalito'>
+<figcaption>Animalito</figcaption> `
+
+$box2.appendChild($figure)
+$box2.classList.add("box")
+
+body.appendChild($box2)
+
+/* Insertando elementos de un array */
+
+const $ul = d.createElement("ul")
+
+const estaciones = ["otoño", "invierno", "primavera","verano"]
+
+estaciones.forEach(estacion => {
+
+    const $li = d.createElement("li")
+    $li.textContent = estacion
+    $ul.appendChild($li)
+    
+})
+
+body.appendChild($ul)

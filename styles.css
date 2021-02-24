@@ -23,3 +23,74 @@ body {
 
     text-align: center;
 }
+
+.cajita {
+    background-color: red;
+}
+
+/* nav */
+
+li {
+    list-style: none;
+   
+}
+
+a {
+    text-decoration: none;
+    border: none;
+    padding:1rem;
+    color:#fff;
+ 
+}
+
+.nav{
+    width:100%;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-links {
+    display: flex;
+    width:90%;
+    margin:auto;
+    padding:2rem 0;
+  
+    justify-content: end;
+
+
+}
+
+.submenu {
+    visibility: hidden;
+    margin-top:2rem;
+    position: absolute;
+    background-color: transparent;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.visible {
+    visibility: visible;
+}
+
+.submenu-link:hover {
+    background-color: rgba(204, 204, 204, 0.315);
+}
+
+.submenu-link {
+    display:block;
+    padding:1rem;
+    color:#fff;
+}
+
+#arrowIcon {
+    margin-left:.5rem;
+ 
+}
+
+
